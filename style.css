@@ -1,0 +1,10 @@
+#arrayContainer{
+	font-size:0;
+}
+
+.arrayBlock{
+	width: 15px;
+	border: 1px solid blue;
+	background-color: cyan;
+	display:inline-block;
+}
