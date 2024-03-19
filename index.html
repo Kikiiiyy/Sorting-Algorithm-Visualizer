@@ -6,22 +6,23 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div>
+		<div id="dashboard">
 			<button type="button" onclick="generateArray()">Generate an array.</button>
 			<button type="button" onclick="sortArray()">Sort the array.</button>
-			<input type="range" id="size" oninput="generateArray()" min="3" max="100" value="30"/>
+			<input type="range" id="size" oninput="generateArray()" min="3" max="200" value="30"/>
 			<label for="size">Size</label>
 			<input type="range" id="speed" min="1" max="100" value="10"/>
 			<label for="size">Speed</label>
 			<select id="sortSelect">
 				<option value="selection" selected>Selection</option>
 				<option value="bubble">Bubble</option>
-				<option value="bogo">Bogo</option>
+				<option value="insertion">Insertion</option>
 			</select>
+			<button type="button" onclick="loadPreviousArray()">Load last sorted array.</button>
+			<h1 id="selector"></h1>
 		</div>
 		<div id="arrayContainer">
 		</div>
-		<h1 id="selector"></h1>
 		<script src="script.js"></script>
 	</body>
 </html>
