@@ -41,12 +41,10 @@ function deleteArray(){
 
 function mouseOver(){
 	this.style.backgroundColor="red";
-	document.getElementById("selector").innerText=this.dataset.value;
 }
 
 function mouseOut(){
 	this.style.backgroundColor="cyan";
-	document.getElementById("selector").innerText="";
 }
 
 function generateArray(){
@@ -67,8 +65,6 @@ function sleep(ms) {
 
 async function selectionSort(){
 	for(let i=0;i<tab.length;i++){
-		document.querySelector('[data-place="'+i+'"]').style.backgroundColor="green";
-		await sleep(10*(100/(inputSpeed.value)));
 		let min=i;
 		for(let j=i+1;j<tab.length;j++){
 			if(tab[j]<tab[min]){
@@ -79,9 +75,7 @@ async function selectionSort(){
 			[tab[i], tab[min]]=[tab[min], tab[i]];
 			deleteArray();
 			showArray();
-			document.querySelector('[data-place="'+min+'"]').style.backgroundColor="green";
 			await sleep(10*(100/(inputSpeed.value)));
-			document.querySelector('[data-place="'+min+'"]').style.backgroundColor="cyan";
 		}
 	}
 	sorting=false;
